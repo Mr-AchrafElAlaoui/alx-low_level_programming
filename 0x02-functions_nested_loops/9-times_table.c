@@ -1,25 +1,28 @@
-#include <stdio.h>
-
+#include "main.h"
 /**
- *main - print 0-9 separated with commas, using putchar
- *Return: Always 0 (Success)
- */
-
-int main(void)
+*times_table - prints the 9 times table
+*
+*Return: returns nothing
+*/
+void times_table(void)
 {
-	int n = '0';
+int digit, mult, result;
+for (digit = 0; digit <= 9; digit++)
+{
+_putchar('0');
 
-	while (n <= '9')
-	{
-		putchar(n);
-		if (n != '9')
-		{
-			putchar(',');
-			putchar(' ');
-		}
-		n++;
-	}
-	putchar('\n');
+for (mult = 1; mult <= 9; mult++)
+{
+_putchar(',');
+_putchar(' ');
+result = digit * mult;
+if (result <= 9)
+_putchar(' ');
+else
+_putchar((result / 10) + '0');
 
-	return (0);
+_putchar((result % 10) + '0');
+}
+_putchar('\n');
+}
 }
