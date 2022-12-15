@@ -1,16 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * _isupper - Check if paramter c represents an uppercase letter.
- * @c: Int representing a character
- * Return: Always 0.
- */
-int _isupper(int c)
+* _isdigit - check for digit
+*
+* @c: integer
+*
+* Return: 1 if it is a digit
+*/
+int _isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
