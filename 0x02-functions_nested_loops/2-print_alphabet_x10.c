@@ -6,11 +6,22 @@
 void print_alphabet_x10(void)
 {
 	int count;
+	char lower_char;
 
 	count = 0;
 
 	while (count < 10)
 	{
-		print_alphabet();
+		lower_char = 'a';
+
+		while (lower_case <= 'z')
+		{
+			_putchar(lower_case);
+			lower_case++;
+		}
+
+		_putchar('\n');
+
+		count++;
 	}
 }
