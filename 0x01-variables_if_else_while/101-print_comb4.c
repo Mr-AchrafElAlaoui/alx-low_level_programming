@@ -7,24 +7,24 @@
  */
 int main(void)
 {
-	int first_digit;
-	int second_digit;
-	int third_digit;
+	int i;
+	int j;
+	int k;
 
-	for (first_digit = 48; first_digit <= 55; first_digit++)
+	for (i = '0'; i <= '7'; i++)
 	{
-		for (second_digit = first_digit + 1; second_digit <= 56; second_digit++)
+		for (j = i + 1; j <= '8'; j++)
 		{
-			for (third_digit = second_digit + 1; third_digit <= 57; third_digit++)
+			for (k = j + 1; k <= '9'; k++)
 			{
-				putchar(first_digit);
-				putchar(second_digit);
-				putchar(third_digit);
+				putchar(i);
+				putchar(j);
+				putchar(k);
 
-				if (first_digit != 55 || second_digit != 56 || third_digit != 57)
+				if (i != '7' || j != '8' || k != '9')
 				{
-					putchar(44);
-					putchar(32);
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
