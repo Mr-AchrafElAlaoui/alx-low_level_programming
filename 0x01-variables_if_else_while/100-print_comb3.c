@@ -7,20 +7,19 @@
  */
 int main(void)
 {
-	int first_digit;
-	int second_digit;
+	int i;
+	int j;
 
-	for (first_digit = 48; first_digit < 57; first_digit++)
+	for (i = '0'; i <= '8'; i++)
 	{
-		for (second_digit = first_digit + 1; second_digit <= 57; second_digit++)
+		for (j = i + 1; j <= '9'; j++)
 		{
-			putchar(first_digit);
-			putchar(second_digit);
-
-			if (first_digit != 56 || second_digit != 57)
+			putchar(i);
+			putchar(j);
+			if (!(i == '8' && j == '9'))
 			{
-				putchar(44);
-				putchar(32);
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
