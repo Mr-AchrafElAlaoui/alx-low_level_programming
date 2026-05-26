@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int lower_char;
+	char lower_char;
 
-	lower_char = 97;
+	lower_char = 'a';
 
-	while (lower_char <= 122)
+	while (lower_char <= 'z')
 	{
 		putchar(lower_char);
 		lower_char++;
