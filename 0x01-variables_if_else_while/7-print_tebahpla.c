@@ -7,14 +7,14 @@
  */
 int main(void)
 {
-	int lower_char;
+	char ch;
 
-	lower_char = 122;
+	ch = 'z';
 
-	while (lower_char >= 97)
+	while (ch >= 'a')
 	{
-		putchar(lower_char);
-		lower_char--;
+		putchar(ch);
+		ch--;
 	}
 
 	putchar('\n');
