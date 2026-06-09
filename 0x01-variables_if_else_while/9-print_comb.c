@@ -7,21 +7,21 @@
  */
 int main(void)
 {
-	int single_digit;
+	int digit;
 
-	single_digit = 48;
+	digit = '0';
 
-	while (single_digit <= 57)
+	while (digit <= '9')
 	{
-		putchar(single_digit);
+		putchar(digit);
 
-		if (single_digit != 57)
+		if (digit != '9')
 		{
-			putchar(44);
-			putchar(32);
+			putchar(',');
+			putchar(' ');
 		}
 
-		single_digit++;
+		digit++;
 	}
 
 	putchar('\n');
