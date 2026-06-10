@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-	unsigned int i, first, second, next;
+	unsigned int i;
+	unsigned long first, second, next;
 
 	first = 0;
 	second = 1;
@@ -19,11 +20,11 @@ int main(void)
 
 		if (i != 50)
 		{
-			printf("%u, ", next);
+			printf("%lu, ", next);
 		}
 		else
 		{
-			printf("%u\n", next);
+			printf("%lu\n", next);
 		}
 
 		first = second;
