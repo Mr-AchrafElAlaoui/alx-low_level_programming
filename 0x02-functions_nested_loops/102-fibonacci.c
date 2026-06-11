@@ -14,22 +14,18 @@ int main(void)
 	second = 1;
 	next = 0;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i < 50; i++)
 	{
 		next = first + second;
 
-		if (i != 50)
-		{
-			printf("%lu, ", next);
-		}
-		else
-		{
-			printf("%lu\n", next);
-		}
+		printf("%lu, ", next);
 
 		first = second;
 		second = next;
 	}
+
+	next = first + second;
+	printf("%lu\n", next);
 
 	return (0);
 }
