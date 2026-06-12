@@ -7,9 +7,9 @@
  */
 int main(void)
 {
-	unsigned long first;
-	unsigned long second;
-	unsigned long next;
+	double first;
+	double second;
+	double next;
 	unsigned int i;
 
 	first = 0;
@@ -19,15 +19,15 @@ int main(void)
 	{
 		next = first + second;
 
-		printf("%lu, ", next);
+		printf("%.0f, ", next);
 
 		first = second;
 		second = next;
 	}
-	
+
 	next = first + second;
 
-	printf("%lu\n", next);
+	printf("%.0f\n", next);
 
 	return (0);
 }
