@@ -13,7 +13,7 @@ int main(void)
 	unsigned long int base;
 	unsigned int i, carry;
 
-	base = 100000000000000000;
+	base = 1000000000000000000;
 	first[0] = 1;
 	first[1] = 0;
 	second[0] = 2;
@@ -32,7 +32,7 @@ int main(void)
 
 		if (next[1] > 0)
 		{
-			printf(", %lu%09lu", next[1], next[0]);
+			printf(", %lu%018lu", next[1], next[0]);
 		}
 		else
 		{
