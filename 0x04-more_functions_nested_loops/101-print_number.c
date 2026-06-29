@@ -25,7 +25,7 @@ void print_number(int n)
 
 	while (i <= (num / 10))
 	{
-		i *=10;
+		i *= 10;
 	}
 
 	while (i >= 1)
