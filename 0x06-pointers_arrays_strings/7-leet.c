@@ -4,7 +4,7 @@
  * leet - Encodes a string into 1337
  * @str: The string to be encoded
  *
- * Retrun: Pointer to char
+ * Return: Pointer to char
  */
 char *leet(char *str)
 {
@@ -25,7 +25,7 @@ char *leet(char *str)
 			if (*ptr == alp[i])
 			{
 				*ptr = code[i];
-				
+
 				break;
 			}
 		}
