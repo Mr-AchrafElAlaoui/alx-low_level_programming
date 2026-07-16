@@ -25,7 +25,7 @@ void print_number(int n)
 		_putchar('-');
 	}
 
-	while ( i <= (num  / 10))
+	while (i <= (num  / 10))
 	{
 		i *= 10;
 	}
