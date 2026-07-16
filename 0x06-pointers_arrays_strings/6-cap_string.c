@@ -10,16 +10,17 @@ char *cap_string(char *str)
 {
 	char *ptr;
 	int word;
+
 	ptr = str;
 
 	word = 1;
 
 	while (*ptr != '\0')
 	{
-		if(
+		if (
 		   *ptr == ' ' || *ptr == '\n' || *ptr == '\t' ||
-		   *ptr == ',' ||*ptr == ';' || *ptr == '.' || 
-		   *ptr == '!' || *ptr == '?' || *ptr == '"' || 
+		   *ptr == ',' || *ptr == ';' || *ptr == '.' ||
+		   *ptr == '!' || *ptr == '?' || *ptr == '"' ||
 		   *ptr == '(' || *ptr == ')' || *ptr == '{' || *ptr == '}'
 		   )
 		{
@@ -35,7 +36,6 @@ char *cap_string(char *str)
 
 			word = 0;
 		}
-	
 		ptr++;
 	}
 
