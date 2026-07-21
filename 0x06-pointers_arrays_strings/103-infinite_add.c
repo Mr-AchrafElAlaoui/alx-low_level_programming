@@ -3,53 +3,38 @@
 
 /**
  * infinite_add - adds two numbers
- * @n1: First operand
- * @n2: Second operand
+ * @n1: First operand string
+ * @n2: Second operand string
+ * @r: Buffer to strore the result
+ * @size_r: Buffer size
  *
- * Return: Pointer to the result
+ * Return: Pointer to the result, or 0 if it doesn't fit
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i;
-	int j;
-	int k;
-	int num1;
-	int num2;
-	int sum;
-	int carry;
+	int i, j, k, num1, num2, sum, carry;
 	char tmp;
 
 	carry = 0;
-	i = 0;
-	j = 0;
-	k = 0;
+	i = j = k = 0;
 
 	while (n1[i] != '\0')
-	{
 		i++;
-	}
-
 	while (n2[j] != '\0')
-	{
 		j++;
-	}
 
 	i--;
 	j--;
-	
+
 	while (i >= 0 || j >= 0 || carry > 0)
 	{
 		if ((size_r - 1) <= k)
-		{
 			return (0);
-		}
 
 		num1 = (i >= 0) ? (n1[i] - '0') : 0;
 		num2 = (j >= 0) ? (n2[j] - '0') : 0;
-		
 		sum = num1 + num2 + carry;
 		carry = sum / 10;
-
 		r[k] = ((sum % 10) + '0');
 
 		i--;
@@ -60,15 +45,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	r[k] = '\0';
 	k--;
 
-	for (i = 0; i < k; k--)
+	for (i = 0; i < k; i++, k--)
 	{
 		tmp = r[i];
 		r[i] = r[k];
 		r[k] = tmp;
-
-		i++;
 	}
 
 	return (r);
-
 }
