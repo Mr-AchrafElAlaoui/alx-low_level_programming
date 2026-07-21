@@ -43,13 +43,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 
 	r[k] = '\0';
-	k--;
 
-	for (i = 0; i < k; i++, k--)
+	for (i = 0, j = k - 1; i < k; i++, k--)
 	{
 		tmp = r[i];
-		r[i] = r[k];
-		r[k] = tmp;
+		r[i] = r[j];
+		r[j] = tmp;
 	}
 
 	return (r);
