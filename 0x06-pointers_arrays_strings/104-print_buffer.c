@@ -11,6 +11,12 @@ void print_buffer(char *b, int size)
 	int i, j;
 	char *chunk;
 
+	if ( size <= 0)
+	{
+		printf("\n");
+		return;
+	}
+
 	for (i = 0; i < size; i += 10)
 	{
 		chunk = b + i;
