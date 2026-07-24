@@ -11,7 +11,7 @@ void print_buffer(char *b, int size)
 	int i, j;
 	char *chunk;
 
-	if ( size <= 0)
+	if (size <= 0)
 	{
 		printf("\n");
 		return;
@@ -20,7 +20,6 @@ void print_buffer(char *b, int size)
 	for (i = 0; i < size; i += 10)
 	{
 		chunk = b + i;
-
 		printf("%08x:", i);
 
 		for (j = 0; j < 10; j++)
@@ -29,13 +28,9 @@ void print_buffer(char *b, int size)
 				printf(" ");
 
 			if (i + j < size)
-			{
 				printf("%02x", chunk[j]);
-			}
 			else
-			{
 				printf("  ");
-			}
 		}
 
 		printf(" ");
