@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strspn - gets the lengh of a prefix substring
- * @s: String
- * @accept: prefix substring
+ * _strspn - Gets the lengh of a prefix substring
+ * @s: The main string to check
+ * @accept: The dictionary of accepter characters
  *
  * Return: The number of bytes in the initial segment of s
  */
