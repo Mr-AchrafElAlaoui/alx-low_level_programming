@@ -29,5 +29,5 @@ int tail_factorial(int n, int a)
  */
 int factorial(int n)
 {
-	return (factorial_increment(n, 1));
+	return (tail_factorial(n, 1));
 }
