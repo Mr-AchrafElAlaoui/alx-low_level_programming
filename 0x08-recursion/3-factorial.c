@@ -22,7 +22,7 @@ int tail_factorial(int n, int a)
  * @n: The number to calculate the factorial of
  *
  * Description: Acts as a clean wrapper function for the end user.
- * It jumpstarts the tail_factorial helper function by 
+ * It jumpstarts the tail_factorial helper function by
  * passing the initial accumulator value of 1.
  *
  * Return: The factorial of the number
