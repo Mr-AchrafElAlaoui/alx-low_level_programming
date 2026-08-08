@@ -5,7 +5,7 @@
  * @x: The base number
  * @y: The exponent number
  *
- * Retrun: The result of x raised to the power of y,
+ * Return: The result of x raised to the power of y,
  * otherwise -1 if y is lower than 0
  */
 int _pow_recursion(int x, int y)
