@@ -27,4 +27,6 @@ int sqrt_accumulator(int a, int n)
 int _sqrt_recursion(int n)
 {
 	return (sqrt_accumulator(0, n));
+
+	/* Use binary search for optimization */
 }
