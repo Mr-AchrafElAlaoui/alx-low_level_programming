@@ -7,14 +7,14 @@
  *
  * Return: The natural square root,
  * otherwise -1 if n does note have a natural square root
- */ 
+ */
 int sqrt_accumulator(int a, int n)
 {
 	if ((a * a) > n)
 		return (-1);
 	if ((a * a) == n)
 		return (a);
-	
+
 	return (sqrt_accumulator(a + 1, n));
 
 }
