@@ -9,7 +9,7 @@
  * and stops at the square root (a * a > n) to save CPU cycles.
  *
  * Return: 1 if prime, 0 if not.
- */ 
+ */
 int prime_number_accumulator(int n, int a)
 {
 	if (n % a == 0)
