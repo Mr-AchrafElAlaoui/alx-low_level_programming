@@ -1,5 +1,13 @@
 #include "main.h"
- 
+
+
+/**
+ * str_last_char - Finds the last character of a string
+ * @p: The string to evaluate
+ *
+ * Description: Looks one step ahead to find the wall (\0)
+ * Return: Pointer to the very last character before the null byte
+ */
 char *str_last_char(char *p)
 {
 
