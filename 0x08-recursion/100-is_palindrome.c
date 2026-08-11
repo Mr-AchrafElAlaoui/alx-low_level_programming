@@ -23,7 +23,7 @@ char *str_last_char(char *p)
  * @p: POinter to the right side (moving backward)
  *
  * Return: 1 if palindrome, 0 if not
- */ 
+ */
 int palindrome_recursive(char *s, char *p)
 {
 	if (s >= p)
@@ -52,6 +52,6 @@ int is_palindrome(char *s)
 		return (1);
 
 	p = str_last_char(p);
-	
+
 	return (palindrome_recursive(s, p));
 }
