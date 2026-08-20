@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main -Entry point
- * @argc:
- * @argv:
+ * main - Entry point, prints all arguments it receives.
+ * @argc: The number of command line arguments passed
+ * @argv: Array containing the program command line arguments passed
  *
  * Return: Always 0 (Success)
  */
