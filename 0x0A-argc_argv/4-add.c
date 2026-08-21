@@ -5,7 +5,7 @@
 /**
  * main - Entry point, adds positive numbers
  * @argc: The number of command line arguments passed
- * @argv: Array containing command line arguments passed
+ * @argv: Array containing the program command line arguments passed
  *
  * Return: 0 (Success), 1 (Error) contains symbols that are not digits.
  */
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 {
 	int sum;
 	int i;
-	
+
 	sum = 0;
 
 	if (argc == 1)
