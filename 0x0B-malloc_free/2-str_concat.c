@@ -7,7 +7,7 @@
  * @s1: First string
  * @s2: Second string
  *
- * Return: Pointer to allocated space in memory, contains the contents of s1 
+ * Return: Pointer to allocated space in memory, contains the contents of s1
  * followed by the contents of s2, otherwise NULL on failure
  */
 char *str_concat(char *s1, char *s2)
@@ -17,7 +17,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int len2;
 	unsigned int i;
 	unsigned int j;
-	
+
 	len1 = 0;
 	len2 = 0;
 
