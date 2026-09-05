@@ -35,7 +35,7 @@ void free_array(char **words, int size)
 {
 	int i;
 
-	for (i = 0; i < count; i++)
+	for (i = 0; i < size; i++)
 	{
 		free(words[i]);
 	}
@@ -52,7 +52,8 @@ void free_array(char **words, int size)
 char **strtow(char *str)
 {
 	char **words;
-	int i = 0, j = 0, k, words_count, len;
+	char *ptr;
+	int i, j = 0, k, words_count, len;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
@@ -65,30 +66,31 @@ char **strtow(char *str)
 	if (words == NULL)
 		return (NULL);
 
-	while (str[i] != '\0' && j < words_count)
+	for (i = 0; i < words_count; i++)
 	{
-		while (str[i] == ' ')
-			i++;
+		while (str[j] == ' ')
+			j++;
 
+		ptr = str + j;
 		len = 0;
-		while (str[i + len] != ' ' && str[i + len] != '\0')
-			len++;
-
-		words[j] = malloc(sizeof(char) * (len + 1));
-		if (words[j] == NULL)
+		while (str[j] != ' ' && str[j] != '\0')
 		{
-			free_array(words, j);
+			len++;
+			j++;
+		}
+
+		words[i] = malloc(sizeof(char) * (len + 1));
+		if (words[i] == NULL)
+		{
+			free_array(words, i);
 			return (NULL);
 		}
 
 		for (k = 0; k < len; k++)
-		{
-			words[j][k] = str[i];
-			i++;
-		}
-		words[j][k] = '\0';
-		j++;
+			words[i][k] = ptr[k];
+
+		words[i][k] = '\0';
 	}
-	words[j] = NULL;
+	words[i] = NULL;
 	return (words);
 }
